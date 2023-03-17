@@ -17,39 +17,32 @@
 
         <img src="imagens/engefotoLogo.jpg" alt=""><br><br>
 
-    <form id="formularioFicha" onsubmit="enviar()" >
-        <div class="form-group">
-
-            <fieldset>
-                <legend>Informações de Identificação</legend>
-                
-                <label id="lbcodigopassivo" for="codigopassivo">Código do passivo: </label>
-            <input  class="form-control" id="codigopassivo" type="text" name="codigopassivo">
-    
-            <label id="lbrodovia" for="rodovia">Rodovia: </label>
-            <input id="rodovia"  class="form-control" type="text" name="rodovia">
-            
-            <select class="form-control" name="municipio" id="municipio">
-                <option value="Rio De Janeiro">Rio de Janeiro</option>
-                <option value="Minas Gerais"> Minas Gerais</option>
-            </select>
-        </fieldset><br><br>
-        
-        <fieldset>
-            <legend>Localização do Passivo Ambiental</legend>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
+        <form id="formularioFicha" onsubmit="enviar()">
+            <div class="form-row">
+                <div class="col">
+                    <label id="lbcodigopassivo" for="codigopassivo">Código do passivo: </label>
+                    <input class="form-control" id="codigopassivo" type="text" name="codigopassivo">
+                </div>
+                <div class="col">
+                    <label id="lbrodovia" for="rodovia">Rodovia: </label>
+                    <input id="rodovia" class="form-control" type="text" name="rodovia">
+                </div>
             </div>
-            
-        </fieldset>
-    
-        <input type="submit" value="Enviar">
+            <div class="col">
+                <label for="municipio">Municipio: </label>
+                <select class="form-control" name="municipio" id="municipio">
+                    <option value="Rio De Janeiro">Rio de Janeiro</option>
+                    <option value="Minas Gerais"> Minas Gerais</option>
+                </select>
+            </div>
+
+
+            <input type="submit" value="Enviar">
     </div>
     </form>
 
     </div>
-    
+
 </body>
 
 </html>
