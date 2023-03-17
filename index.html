@@ -13,34 +13,66 @@
 </head>
 
 <body>
-    <div class="container">
 
-        <img src="imagens/engefotoLogo.jpg" alt=""><br><br>
+    <!-- AQUI ABAIXO TÁ ORGANIZADO -->
 
-        <form id="formularioFicha" onsubmit="enviar()">
-            <div class="form-row">
-                <div class="col">
-                    <label id="lbcodigopassivo" for="codigopassivo">Código do passivo: </label>
-                    <input class="form-control" id="codigopassivo" type="text" name="codigopassivo">
+    <div class="container" style="background-color: #eee">
+        <div class="container" >
+            <img src="imagens/engefotoLogo.jpg" alt=""><br><br>
+
+            <form id="formularioFicha" onsubmit="enviar()">
+                <div class="form-row">
+                    <div class="col">
+                        <label id="lbcodigopassivo" for="codigopassivo">Código do passivo: </label>
+                        <input class="form-control" id="codigopassivo" type="text" name="codigopassivo">
+                    </div>
+                    <div class="col">
+                        <label id="lbrodovia" for="rodovia">Rodovia: </label>
+                        <input id="rodovia" class="form-control" type="text" name="rodovia">
+                    </div>
                 </div>
-                <div class="col">
-                    <label id="lbrodovia" for="rodovia">Rodovia: </label>
-                    <input id="rodovia" class="form-control" type="text" name="rodovia">
+                <div class="form-row">
+                    <label for="municipio">Municipio: </label>
+                    <select class="form-control" name="municipio" id="municipio">
+                        <option value="Rio De Janeiro">Rio de Janeiro</option>
+                        <option value="Minas Gerais"> Minas Gerais</option>
+                    </select>
                 </div>
-            </div>
-            <div class="col">
-                <label for="municipio">Municipio: </label>
-                <select class="form-control" name="municipio" id="municipio">
-                    <option value="Rio De Janeiro">Rio de Janeiro</option>
-                    <option value="Minas Gerais"> Minas Gerais</option>
+    
+                <!-- AQUI TÁ DESORGANIZADO -->
+    
+                <label id="lbkminicial" for="kminicial">Km Inicial: </label>
+                <input id="kminicial" type="text" name="kminicial">
+    
+                <label id="lbkmfinal" for="kmfinal">Km Final:</label>
+                <input id="kmfinal" type="text" name="kmfinal">
+    
+                <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial</label>
+                <input id="coordInicial" type="text" name="coordInicial">
+    
+                <label id="lbcoordFinal" for="coordFinal">Coordenada Final: </label>
+                <input id="coordFinal" type="text" name="coordFinal">
+    
+                <label id="lbsentido" for="sentido">Sentido: </label>
+                <input id="sentido" type="text" name="sentido">
+    
+                <select name="sentidons" id="sentidons">
+                    <option value="Direito/Sul">Direito/Sul</option>
+                    <option value="Norte">Esquerdo/Norte</option>
                 </select>
-            </div>
-            
-
-            <input type="submit" value="Enviar">
-    </div>
-    </form>
-
+    
+                <label id="lbcausageradora" for="causageradora">Causa Geradora: </label>
+                <select name="causageradora" id="causageradora">
+                    <option value="Rodovia">Rodovia</option>
+                    <option value="Terceiros">Terceiros</option>
+                </select>
+    
+                <br><input type="submit" class="btn btn-primary" value="Enviar">
+            </form>
+        </div>
+    
+        </div>
+        
     </div>
 
 </body>
