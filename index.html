@@ -62,10 +62,61 @@
                 </select>
     
                 <label id="lbcausageradora" for="causageradora">Causa Geradora: </label>
-                <select name="causageradora" id="causageradora">
+                <select id="causageradora" name="causageradora" >
                     <option value="Rodovia">Rodovia</option>
                     <option value="Terceiros">Terceiros</option>
                 </select>
+
+                <label id="lblocalpassivo" for="localpassivo">Local do Passivo Ambiental: </label>
+                <select name="localpassivo" id="localpassivo">
+                    <option value="Talude de Corte">Talude de Corte</option>
+                    <option value="Talude de aterro">Talude de aterro</option>
+                    <option value="Faixa de dominio">Faixa de Domínio</option>
+                    <option value="Fora de FD">Fora de FD</option>
+                    <option value="Faixa nao edificavel">Faixa Não Edificável</option>
+                </select>
+                <select name="ambientalsocial" id="ambientalsocial">
+                    <option value="Ambiental">AMBIENTAL</option>
+                    <option value="Social">SOCIAL</option>
+                </select>
+                
+                <label id="lbcentrodeCusto" for="centrodeCusto">Centro de Custo: </label>
+                <select name="centrodeCusto" id="centrodeCusto">
+                    <option value="Trabalhos iniciais">Trabalhos Iniciais</option>
+                    <option value="Recuperação">Recuperação</option>
+                    <option value="Monitoramento">Monitoramento</option>
+                </select>
+
+                <label id="tipoDePassivo" for="tipoDePassivo">Tipologia de Passivos: </label>
+                <select name="tipoDePassivo" id="tipoDePassivo">
+                    <option value="ER">Processo Erosivo (ER)</option>
+                    <option value="DS">Desagreg. Superficial (DS)</option>
+                    <option value="FT">Fluxo Trans Inseg. (FT)</option>
+                    <option value="RD">Represam. de Dren. Nat. (RD)</option>
+                    <option value="AS">Assor. De Curso D'Água (AS)</option>
+                    <option value="DE">Dano Estrutural (DE)</option>
+                    <option value="SD">Sistema de Drenagem (SD)</option>
+                    <option value="ES">Escorregamento (ES)</option>
+                    <option value="recalque RE">Recalque (RE)</option>
+                    <option value="RB">Rolamento de Blocos (RB)</option>
+                    <option value="QB">Queda de Bloco (QB)</option>
+                    <option value="VS">App Suprimida (VS)</option>
+                    <option value="SE">Solo Exposto (SE)</option>
+                    <option value="deposicao residuos RE">Deposição de Residiuos (RE)</option>
+                    <option value="AI">Acessos Irregulares (AI)</option>
+                    <option value="AC">Pot. de Contamin. (AC)</option>
+                    <option  value="" selected>Nenhum</option>
+                </select>
+
+                <label id="lbtipoOF" for="tipoOF">Ocupação Irregular (OF): </label>
+                <select name="tipoOF" id="tipoOF">
+                    <option value="comercial" >Comercial</option>
+                    <option value="residencial"> Residencial</option>
+                    <option value="barracas">Barracas</option>
+                    <option value="abaixo do padrao">Abaixo do Padrão Min.</option>
+                    <option value="cultivo">Cultivo</option>
+                </select>
+                    
     
                 <br><input type="submit" class="btn btn-primary" value="Enviar">
             </form>
