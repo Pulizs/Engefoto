@@ -24,12 +24,13 @@ function enviar() {
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
     let registrofotografico = document.getElementById("registrofotografico").value;
 
-    if (codigoPassivo == "" || rodovia == "") {
+    if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicial == "" || sentido == "" || sentidons == "") {
         erroPreenchimento();
     } else{
         alert(codigoPassivo + " " + rodovia + " " + municipio + " " + kminicial);   
     }
 }
+
 
 function erroPreenchimento() {
     alert("algum campo não foi preenchido");
