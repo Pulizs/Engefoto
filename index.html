@@ -157,9 +157,31 @@
                     <option value="grupo4">Grupo V</option>
                 </select>
 
-                <label id="" for=""></label>
-                <textarea id="" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label id="lbobs" for="obs">Observações Relevantes: </label>
+                <textarea id="obs" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva aqui as observações..."></textarea>
 
+                <label id="lbdiretrizesTecnicas" for="diretrizesTecnicas">Diretrizes Técnicas para Recuperação/Remediação: </label>
+                <select name="diretrizesTecnicas" id="diretrizesTecnicas">
+                    <option value="estabilazacao">Estabilização</option>
+                    <option value="recomposicao">Recompisão</option>
+                    <option value="enleivamento">Enleivamento</option>
+                    <option value="sarjetaConcreto">Sarjeta Trapezoidal Concreto</option>
+                    <option value="gabiao">Gabião</option>
+                    <option value="manutenConserv">Manuten. e Conservação</option>
+                    <option value="remanFD">Reman./ Desoucup. da FD</option>
+                    <option value="retentores">Retentores de sedimentos</option>
+                    <option value="trincheira">Trincheira drenante</option>
+                    <option value="muro">Muro de concreto</option>
+                    <option value="retaludamento">Retaludamento</option>
+                    <option value="hidro">Hidrossemeadura</option>
+                    <option value="aterrosDegraus">Aterros em degraus</option>
+                    <option value="enrocamentoPedra">Enrocamento de pedra</option>
+                    <option value="necIntervaloFD">Nec. de interv. além da FD</option>
+                </select>
+                <input id="diretrizesTecnicas" type="text" name="diretrizesTecnicas" placeholder="Outros">
+
+                <label id="lbregistrofotografico" for="registrofotografico">Registro Fotográfico: </label>
+                <input id="registrofotografico" type="file" name="registrofotografico">
 
                 <br><input type="submit" class="btn btn-primary" value="Enviar">
             </form>
