@@ -1,0 +1,25 @@
+{
+  "name": "engefoto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pulizs/Engefoto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pulizs/Engefoto/issues"
+  },
+  "homepage": "https://github.com/Pulizs/Engefoto#readme",
+  "dependencies": {
+    "excel4node": "^1.8.0",
+    "sequelize": "^6.29.3",
+    "sqlite3": "^5.1.6"
+  }
+}
