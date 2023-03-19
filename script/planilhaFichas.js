@@ -1,16 +1,4 @@
-const xl = require('excel4node');
-const wb = new xl.Workbook();
-const ws = wb.addWorkSheet('planilhaaaa');
 
-const data = [
-    {
-        "name": "Teste"
-    }
-]
-
-const titulos = [
-    "Nome"
-]
 
 function enviar() {
     let codigoPassivo = document.getElementById("codigopassivo").value.toUpperCase().replace(" ", "-");
