@@ -27,11 +27,16 @@ function enviar() {
     let registrofotografico = document.getElementById("registrofotografico").value;
     
     
-    
     if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicial == "" || sentido == "" || sentidons == "") {
         erroPreenchimento();
     } else{
-        redirecionando();
+        var win = window.open();
+
+        win.document.write('<html><head>');
+        win.document.write('<title>Empregados</title>');
+        win.document.write('</head><body>');
+        win.document.write('<p>aaaaa</p>');
+        win.document.write('</body></html>');
     }
 }
 
@@ -41,4 +46,7 @@ function erroPreenchimento() {
 
 function redirecionando() {
     document.getElementById("formularioFicha").action = "subsite/ficha.html";
+}
+function testando( codigoPassivo){
+    alert(enviar(codigoPassivo));
 }
