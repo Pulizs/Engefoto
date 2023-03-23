@@ -35,7 +35,8 @@ function enviar() {
         win.document.write('<html><head>');
         win.document.write('<title>Empregados</title>');
         win.document.write('</head><body>');
-        win.document.write('<p>aaaaa</p>');
+        win.document.write('<h1>', codigoPassivo, '</h1>');
+        win.document.write(codigoPassivo);
         win.document.write('</body></html>');
     }
 }
