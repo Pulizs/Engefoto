@@ -32,27 +32,34 @@ function enviar() {
     } else{
         var style = "<style>";
         style = style + "table {width: 100%;font: 20px Calibri;}";
-        style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style = style + "table, td {border: solid 1px #DDD; border-collapse: collapse;";
         style = style + "padding: 2px 3px;text-align: center;}";
         style = style + "</style>";
 
         var win = window.open();
 
         win.document.write('<html><head>');
-        win.document.write('<title>Empregados</title>');
+        win.document.write('<title>Ficha ', codigoPassivo , '</title>');
         win.document.write(style);
         win.document.write('</head>');
         win.document.write('<body>');
         win.document.write('<table>');
         win.document.write('<tr>');
-        win.document.write('<td>Codigo passivo: ', codigoPassivo , '</td>');
+        win.document.write('<th>Codigo passivo: ', codigoPassivo , '</th>');
         win.document.write('</tr>');
         win.document.write('<tr>');
-        win.document.write('<td>rodovia: ', rodovia, '</td>');
-        win.document.write('<td>municipio: ', municipio, '</td>');
-        win.document.write('<p>', codigoPassivo, '</p>');
+        win.document.write('<td>Rodovia: ', rodovia, '</td>');
+        win.document.write('<td>Município: ', municipio, '</td>');
+        win.document.write('</tr>');
+        win.document.write('<tr>');
+        win.document.write('<th>Localização do Passivo Ambiental</th>');
+        win.document.write('</tr>');
         win.document.write('</table>');
         win.document.write('</body></html>');
+
+        win.print();
+        win.document.close();
+
     }
 }
 
