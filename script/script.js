@@ -34,7 +34,7 @@ function enviar() {
         style += "table {width: 100%;font: 20px Calibri;}";
         style += "table, td {border: solid 1px #DDD; border-collapse: collapse;";
         style += "padding: 2px 3px;text-align: center;}";
-        style += "th {background-color: grey;}"
+        style += "th {}"
         style += "</style>";
 
         var win = window.open();
@@ -71,6 +71,11 @@ function enviar() {
         win.document.write('<tr>');
         win.document.write('<td>Coordenada Final: ', coordFinal, '</td>');
         win.document.write('<td>Sentido: ', sentidons, '</td>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<th>Causa Gerador: ', causageradora, '</th>');
+        win.document.write('<th>Local do Passivo Ambiental: ', localpassivo, '</th>');
         win.document.write('</tr>');
 
         win.document.write('</table>');
