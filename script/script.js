@@ -31,10 +31,11 @@ function enviar() {
         erroPreenchimento();
     } else{
         var style = "<style>";
-        style = style + "table {width: 100%;font: 20px Calibri;}";
-        style = style + "table, td {border: solid 1px #DDD; border-collapse: collapse;";
-        style = style + "padding: 2px 3px;text-align: center;}";
-        style = style + "</style>";
+        style += "table {width: 100%;font: 20px Calibri;}";
+        style += "table, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style += "padding: 2px 3px;text-align: center;}";
+        style += "th {background-color: grey;}"
+        style += "</style>";
 
         var win = window.open();
 
@@ -47,13 +48,31 @@ function enviar() {
         win.document.write('<tr>');
         win.document.write('<th>Codigo passivo: ', codigoPassivo , '</th>');
         win.document.write('</tr>');
+
         win.document.write('<tr>');
         win.document.write('<td>Rodovia: ', rodovia, '</td>');
         win.document.write('<td>Município: ', municipio, '</td>');
         win.document.write('</tr>');
+
         win.document.write('<tr>');
         win.document.write('<th>Localização do Passivo Ambiental</th>');
         win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td>Km Inicial: ', kminicial, '</td>');
+        win.document.write('<td>Km Final: ', kmfinal, '</td>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td>Coordenada Inicial: ', coordInicial, '</td>');
+        win.document.write('<td>Sentido: ', sentido, '</td>');
+        win.document.write('</tr>');
+        
+        win.document.write('<tr>');
+        win.document.write('<td>Coordenada Final: ', coordFinal, '</td>');
+        win.document.write('<td>Sentido: ', sentidons, '</td>');
+        win.document.write('</tr>');
+
         win.document.write('</table>');
         win.document.write('</body></html>');
 
