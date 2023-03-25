@@ -30,13 +30,28 @@ function enviar() {
     if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicial == "" || sentido == "" || sentidons == "") {
         erroPreenchimento();
     } else{
+        var style = "<style>";
+        style = style + "table {width: 100%;font: 20px Calibri;}";
+        style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style = style + "padding: 2px 3px;text-align: center;}";
+        style = style + "</style>";
+
         var win = window.open();
 
         win.document.write('<html><head>');
         win.document.write('<title>Empregados</title>');
-        win.document.write('</head><body>');
-        win.document.write('<h1>', codigoPassivo, '</h1>');
-        win.document.write(codigoPassivo);
+        win.document.write(style);
+        win.document.write('</head>');
+        win.document.write('<body>');
+        win.document.write('<table>');
+        win.document.write('<tr>');
+        win.document.write('<td>Codigo passivo: ', codigoPassivo , '</td>');
+        win.document.write('</tr>');
+        win.document.write('<tr>');
+        win.document.write('<td>rodovia: ', rodovia, '</td>');
+        win.document.write('<td>municipio: ', municipio, '</td>');
+        win.document.write('<p>', codigoPassivo, '</p>');
+        win.document.write('</table>');
         win.document.write('</body></html>');
     }
 }
@@ -45,9 +60,6 @@ function erroPreenchimento() {
     alert("algum campo não foi preenchido");
 }
 
-function redirecionando() {
-    document.getElementById("formularioFicha").action = "subsite/ficha.html";
-}
 function testando( codigoPassivo){
     alert(enviar(codigoPassivo));
 }
