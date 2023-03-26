@@ -32,9 +32,9 @@ function enviar() {
     } else{
         var style = "<style>";
         style += "table {width: 100%;font: 20px Calibri;}";
-        style += "table, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style += "table, td, .miau {border: solid 1px #DDD; border-collapse: collapse;";
         style += "padding: 2px 3px;text-align: center;}";
-        style += "th {}"
+        style += "th {background-color: #1E90FF;}"
         style += "</style>";
 
         var win = window.open();
@@ -72,10 +72,24 @@ function enviar() {
         win.document.write('<td>Coordenada Final: ', coordFinal, '</td>');
         win.document.write('<td>Sentido: ', sentidons, '</td>');
         win.document.write('</tr>');
+        
+        win.document.write('<tr>');
+        win.document.write('<th>Central de Custo:</th>');
+        win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th>Causa Gerador: ', causageradora, '</th>');
-        win.document.write('<th>Local do Passivo Ambiental: ', localpassivo, '</th>');
+        win.document.write('<td>' + ambientalsocial + '</td>');
+        win.document.write('<td>' + centrodeCusto + '</td>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<th class="miau">Causa Geradora:</th>');
+        win.document.write('<th class="miau">Local do Passivo Ambiental:</th>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td>' + causageradora + '</td>');
+        win.document.write('<td>' + localpassivo + '</td>');
         win.document.write('</tr>');
 
         win.document.write('</table>');
