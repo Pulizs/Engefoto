@@ -20,11 +20,13 @@ function enviar() {
     let gravidadeRodovia = document.getElementById("gravidadeRodovia").value;
     let gravidadeAmbiental = document.getElementById("gravidadeAmbiental").value;
     let dimensoes = document.getElementById("dimensoes").value;
+    let largura = document.getElementById("largura").value;
     let profundidade = document.getElementById("profundidade").value;
     let grupoPassivo = document.getElementById("grupoPassivo").value;
     let observacao = document.getElementById("obs").value;
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
     let registrofotografico = document.getElementById("registrofotografico").value;
+
     
     
     if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicial == "" || sentido == "" || sentidons == "") {
@@ -91,6 +93,40 @@ function enviar() {
         win.document.write('<td>' + causageradora + '</td>');
         win.document.write('<td>' + localpassivo + '</td>');
         win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<th class="miau">Tipologia de Passivo:</th>');
+        win.document.write('<th class="miau">Dinânimca Atual:</th>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td>', tipoDePassivo,'</td>');
+        win.document.write('<td>', dinamicaAtual,'</td>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<th class="miau">Gravidade em Relação a Rodovia:</th>');
+        win.document.write('<th class="miau">Gravidade em Relação ao Ambiente:</th>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td>', gravidadeRodovia,'</td>');
+        win.document.write('<td>', gravidadeAmbiental,'</td>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<th>Dimensões da Ocorrência</th>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td>Comprimento(m): ', dimensoes, '</td>');
+        win.document.write('<td>Largura(m): ', largura, '</td>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td>Profundidade/Altura(m): ', profundidade, '</td>');
+        win.document.write('</tr>');
+        
 
         win.document.write('</table>');
         win.document.write('</body></html>');
