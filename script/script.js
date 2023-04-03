@@ -25,7 +25,9 @@ function enviar() {
     let grupoPassivo = document.getElementById("grupoPassivo").value;
     let observacao = document.getElementById("obs").value;
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
-    let registrofotografico = document.getElementById("registrofotografico").value;
+    var arquivoInput = document.getElementById("registrofotografico");
+    var caminhoArquivo = arquivoInput.value;
+    
 
     
     
@@ -38,6 +40,16 @@ function enviar() {
         style += "padding: 2px 3px;text-align: center;}";
         style += "th {background-color: #1E90FF;}"
         style += "</style>";
+
+
+        var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('visulizarImagem').innerHTML = '';
+            };
+
+            reader.readAsDataURL(arquivoInput.files[0]);
+
+            console.log(arquivoInput.files[0].size);
 
         var win = window.open();
 
@@ -127,8 +139,11 @@ function enviar() {
         win.document.write('<td>Profundidade/Altura(m): ', profundidade, '</td>');
         win.document.write('</tr>');
         
-
         win.document.write('</table>');
+
+        win.document.write('<div id=""visualizarImagem>');
+        win.document.write('</div>');
+
         win.document.write('</body></html>');
 
         win.print();
@@ -139,8 +154,4 @@ function enviar() {
 
 function erroPreenchimento() {
     alert("algum campo não foi preenchido");
-}
-
-function testando( codigoPassivo){
-    alert(enviar(codigoPassivo));
 }
