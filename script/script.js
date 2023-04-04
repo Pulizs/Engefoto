@@ -38,7 +38,7 @@ function enviar() {
         style += "table {width: 100%;font: 20px Calibri;}";
         style += "table, td, .miau {border: solid 1px #DDD; border-collapse: collapse;";
         style += "padding: 2px 3px;text-align: center;}";
-        style += "th {background-color: #1E90FF;}"
+        style += "th {background-color: white;}"
         style += "</style>";
 
 
