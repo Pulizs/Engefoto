@@ -22,7 +22,7 @@
     <div class="container" style="background-color: #eee">
         <div class="container">
 
-            <img src="imagens/engefotoLogo.jpg" alt="" style="height: 20vh; width: 20vb;"><br><br>
+            <img src="imagens/engefotoLogo.jpg" alt="" style="height: 40vh; width: 50vb;"><br><br>
             <form id="formularioFicha" onsubmit="enviar()" action="" method="post">
                 <div class="form-row">
                     <div class="col">
@@ -66,34 +66,45 @@
                 </div>
 
                 <div class="form-row">
-                    <label id="lbsentido" for="sentido">Sentido: </label>
-                    <input class="form-control" id="sentido" type="text" name="sentido">
-
-                    <select class="form-control" name="sentidons" id="sentidons">
-                        <option value="Direito/Sul">Direito/Sul</option>
-                        <option value="Norte">Esquerdo/Norte</option>
-                    </select>
-
+                    <div class="col">
+                        <label id="lbsentido" for="sentido">Sentido: </label>
+                        <input class="form-control" id="sentido" type="text" name="sentido">
+                    </div>
+                    <div class="col">
+                        <label id="lbdirecao" for="sentido">Sentido/Direção: </label>
+                        <select class="form-control" name="sentidons" id="sentidons">
+                            <option value="Direito/Sul">Direito/Sul</option>
+                            <option value="Norte">Esquerdo/Norte</option>
+                        </select>
+                    </div>
                 </div>
 
-                <label id="lbcausageradora" for="causageradora">Causa Geradora: </label>
-                <select class="form-control" id="causageradora" name="causageradora">
-                    <option value="Rodovia">Rodovia</option>
-                    <option value="Terceiros">Terceiros</option>
-                </select>
+                <div class="form-row">
+                    <div class="col">
+                        <label id="lbcausageradora" for="causageradora">Causa Geradora: </label>
+                        <select class="form-control" id="causageradora" name="causageradora">
+                            <option value="Rodovia">Rodovia</option>
+                            <option value="Terceiros">Terceiros</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label id="lblocalpassivo" for="localpassivo">Local do Passivo Ambiental: </label>
+                        <select class="form-control" name="localpassivo" id="localpassivo">
+                            <option value="Talude de Corte">Talude de Corte</option>
+                            <option value="Talude de aterro">Talude de aterro</option>
+                            <option value="Faixa de dominio">Faixa de Domínio</option>
+                            <option value="Fora de FD">Fora de FD</option>
+                            <option value="Faixa nao edificavel">Faixa Não Edificável</option>
+                        </select><br>
+                        <select class="form-control" name="ambientalsocial" id="ambientalsocial">
+                            <option value="Ambiental">AMBIENTAL</option>
+                            <option value="Social">SOCIAL</option>
+                        </select>
 
-                <label id="lblocalpassivo" for="localpassivo">Local do Passivo Ambiental: </label>
-                <select class="form-control" name="localpassivo" id="localpassivo">
-                    <option value="Talude de Corte">Talude de Corte</option>
-                    <option value="Talude de aterro">Talude de aterro</option>
-                    <option value="Faixa de dominio">Faixa de Domínio</option>
-                    <option value="Fora de FD">Fora de FD</option>
-                    <option value="Faixa nao edificavel">Faixa Não Edificável</option>
-                </select>
-                <select class="form-control" name="ambientalsocial" id="ambientalsocial">
-                    <option value="Ambiental">AMBIENTAL</option>
-                    <option value="Social">SOCIAL</option>
-                </select>
+                    </div>
+                </div>
+
+
 
                 <label id="lbcentrodeCusto" for="centrodeCusto">Centro de Custo: </label>
                 <select class="form-control" name="centrodeCusto" id="centrodeCusto">
@@ -161,7 +172,8 @@
                 <label id="lbdimensoes" for="dimensoes">Dimensões da Ocorrencia: </label>
                 <input class="form-control" id="dimensoes" type="number" name="dimensoes" placeholder="Comprimento(m)">
                 <input class="form-control" id="largura" type="number" name="largura" placeholder="Largura(m)">
-                <input class="form-control" id="profundidade" type="number" name="profundidade" placeholder="Profundidade(m)">
+                <input class="form-control" id="profundidade" type="number" name="profundidade"
+                    placeholder="Profundidade(m)">
 
                 <label id="lbgrupoPassivo" for="grupoPassivo">Grupo de Passivos: </label>
                 <select class="form-control" name="grupoPassivo" id="grupoPassivo">
