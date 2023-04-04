@@ -14,12 +14,15 @@
 
 <body>
 
+    <header>
+
+    </header>
     <!-- AQUI ABAIXO TÁ ORGANIZADO -->
 
     <div class="container" style="background-color: #eee">
         <div class="container">
-            <img src="imagens/engefotoLogo.jpg" alt="" style="height: 60vh; width: 80vb;"><br><br>
 
+            <img src="imagens/engefotoLogo.jpg" alt="" style="height: 20vh; width: 20vb;"><br><br>
             <form id="formularioFicha" onsubmit="enviar()" action="" method="post">
                 <div class="form-row">
                     <div class="col">
@@ -39,56 +42,68 @@
                     </select>
                 </div>
 
-                <!-- AQUI TÁ DESORGANIZADO -->
+                <div class="form-row">
+                    <div class="col">
+                        <label id="lbkminicial" for="kminicial">Km Inicial: </label>
+                        <input class="form-control" id="kminicial" type="text" name="kminicial" style="width: 20vw;">
+                    </div>
+                    <div class="col">
+                        <label id="lbkmfinal" for="kmfinal">Km Final:</label>
+                        <input class="form-control" id="kmfinal" type="text" name="kmfinal" style="width: 20vw;">
+                    </div>
 
-                <label id="lbkminicial" for="kminicial">Km Inicial: </label>
-                <input id="kminicial" type="text" name="kminicial">
+                </div>
 
-                <label id="lbkmfinal" for="kmfinal">Km Final:</label>
-                <input id="kmfinal" type="text" name="kmfinal">
+                <div class="form-row">
+                    <div class="col">
+                        <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial</label>
+                        <input class="form-control" id="coordInicial" type="text" name="coordInicial">
+                    </div>
+                    <div class="col">
+                        <label id="lbcoordFinal" for="coordFinal">Coordenada Final: </label>
+                        <input class="form-control" id="coordFinal" type="text" name="coordFinal">
+                    </div>
+                </div>
 
-                <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial</label>
-                <input id="coordInicial" type="text" name="coordInicial">
+                <div class="form-row">
+                    <label id="lbsentido" for="sentido">Sentido: </label>
+                    <input class="form-control" id="sentido" type="text" name="sentido">
 
-                <label id="lbcoordFinal" for="coordFinal">Coordenada Final: </label>
-                <input id="coordFinal" type="text" name="coordFinal">
+                    <select class="form-control" name="sentidons" id="sentidons">
+                        <option value="Direito/Sul">Direito/Sul</option>
+                        <option value="Norte">Esquerdo/Norte</option>
+                    </select>
 
-                <label id="lbsentido" for="sentido">Sentido: </label>
-                <input id="sentido" type="text" name="sentido">
-
-                <select name="sentidons" id="sentidons">
-                    <option value="Direito/Sul">Direito/Sul</option>
-                    <option value="Norte">Esquerdo/Norte</option>
-                </select>
+                </div>
 
                 <label id="lbcausageradora" for="causageradora">Causa Geradora: </label>
-                <select id="causageradora" name="causageradora">
+                <select class="form-control" id="causageradora" name="causageradora">
                     <option value="Rodovia">Rodovia</option>
                     <option value="Terceiros">Terceiros</option>
                 </select>
 
                 <label id="lblocalpassivo" for="localpassivo">Local do Passivo Ambiental: </label>
-                <select name="localpassivo" id="localpassivo">
+                <select class="form-control" name="localpassivo" id="localpassivo">
                     <option value="Talude de Corte">Talude de Corte</option>
                     <option value="Talude de aterro">Talude de aterro</option>
                     <option value="Faixa de dominio">Faixa de Domínio</option>
                     <option value="Fora de FD">Fora de FD</option>
                     <option value="Faixa nao edificavel">Faixa Não Edificável</option>
                 </select>
-                <select name="ambientalsocial" id="ambientalsocial">
+                <select class="form-control" name="ambientalsocial" id="ambientalsocial">
                     <option value="Ambiental">AMBIENTAL</option>
                     <option value="Social">SOCIAL</option>
                 </select>
 
                 <label id="lbcentrodeCusto" for="centrodeCusto">Centro de Custo: </label>
-                <select name="centrodeCusto" id="centrodeCusto">
+                <select class="form-control" name="centrodeCusto" id="centrodeCusto">
                     <option value="Trabalhos iniciais">Trabalhos Iniciais</option>
                     <option value="Recuperação">Recuperação</option>
                     <option value="Monitoramento">Monitoramento</option>
                 </select>
 
                 <label id="tipoDePassivo" for="tipoDePassivo">Tipologia de Passivos: </label>
-                <select name="tipoDePassivo" id="tipoDePassivo">
+                <select class="form-control" name="tipoDePassivo" id="tipoDePassivo">
                     <option value="ER">Processo Erosivo (ER)</option>
                     <option value="DS">Desagreg. Superficial (DS)</option>
                     <option value="FT">Fluxo Trans Inseg. (FT)</option>
@@ -109,7 +124,7 @@
                 </select>
 
                 <label id="lbtipoOF" for="tipoOF">Ocupação Irregular (OF): </label>
-                <select name="tipoOF" id="tipoOF">
+                <select class="form-control" name="tipoOF" id="tipoOF">
                     <option value="Comercial">Comercial</option>
                     <option value="Residencial"> Residencial</option>
                     <option value="Barracas">Barracas</option>
@@ -118,7 +133,7 @@
                 </select>
 
                 <label id="lbdinamicaAtual" for="dinamicaAtual">Dinâmica Atual: </label>
-                <select name="dinamicaAtual" id="dinamicaAtual">
+                <select class="form-control" name="dinamicaAtual" id="dinamicaAtual">
                     <option value="Estavel">Estável</option>
                     <option value="Sujeito A Recorrencia">Estável/Sujeito a Recorrência</option>
                     <option value="Baixa Intensidade">Ativo/Baixa Intensidade</option>
@@ -128,7 +143,7 @@
 
 
                 <label id="lbgravidadeRodovia" for="gravidadeRodovia">Gravidade em Relação à Rodovia: </label>
-                <select name="gravidadeRodovia" id="gravidadeRodovia">
+                <select class="form-control" name="gravidadeRodovia" id="gravidadeRodovia">
                     <option value="Sem Perigo">Sem Perigo</option>
                     <option value="Potencial Para Oferecer Perigo">Potencial para Oferecer Perigo</option>
                     <option value="Com Perigo Eminente">Com Perigo Eminente</option>
@@ -136,7 +151,7 @@
                 </select>
 
                 <label id="lbgravidadeAmbiental" for="gravidadeAmbiental">Gravidade em Relação ao Meio Ambiente:</label>
-                <select name="gravidadeAmbiental" id="gravidadeAmbiental">
+                <select class="form-control" name="gravidadeAmbiental" id="gravidadeAmbiental">
                     <option value="Sem Perigo">Sem Perigo</option>
                     <option value="Potencial para oferecer Perigo">Potencial para Oferecer Perigo</option>
                     <option value="Eminente">Com Perigo Eminente</option>
@@ -144,12 +159,12 @@
                 </select>
 
                 <label id="lbdimensoes" for="dimensoes">Dimensões da Ocorrencia: </label>
-                <input id="dimensoes" type="number" name="dimensoes" placeholder="Comprimento(m)">
-                <input id="largura" type="number" name="largura" placeholder="Largura(m)">
-                <input id="profundidade" type="number" name="profundidade" placeholder="Profundidade(m)">
+                <input class="form-control" id="dimensoes" type="number" name="dimensoes" placeholder="Comprimento(m)">
+                <input class="form-control" id="largura" type="number" name="largura" placeholder="Largura(m)">
+                <input class="form-control" id="profundidade" type="number" name="profundidade" placeholder="Profundidade(m)">
 
                 <label id="lbgrupoPassivo" for="grupoPassivo">Grupo de Passivos: </label>
-                <select name="grupoPassivo" id="grupoPassivo">
+                <select class="form-control" name="grupoPassivo" id="grupoPassivo">
                     <option value="Grupo I">Grupo I</option>
                     <option value="Grupo II">Grupo II</option>
                     <option value="Grupo III">Grupo III</option>
@@ -158,10 +173,12 @@
                 </select>
 
                 <label id="lbobs" for="obs">Observações Relevantes: </label>
-                <textarea id="obs" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escreva aqui as observações..."></textarea>
+                <textarea id="obs" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Escreva aqui as observações..."></textarea>
 
-                <label id="lbdiretrizesTecnicas" for="diretrizesTecnicas">Diretrizes Técnicas para Recuperação/Remediação: </label>
-                <select name="diretrizesTecnicas" id="diretrizesTecnicas">
+                <label id="lbdiretrizesTecnicas" for="diretrizesTecnicas">Diretrizes Técnicas para
+                    Recuperação/Remediação: </label>
+                <select class="form-control" name="diretrizesTecnicas" id="diretrizesTecnicas">
                     <option value="Estabilização">Estabilização</option>
                     <option value="Recomposicao">Recomposição</option>
                     <option value="Enleivamento">Enleivamento</option>
@@ -178,7 +195,8 @@
                     <option value="Enrocamento de pedra">Enrocamento de pedra</option>
                     <option value="Nec. de interv. além da FD">Nec. de interv. além da FD</option>
                 </select>
-                <input id="diretrizesTecnicas" type="text" name="diretrizesTecnicas" placeholder="Outros">
+                <input class="form-control" id="diretrizesTecnicas" type="text" name="diretrizesTecnicas"
+                    placeholder="Outros">
 
                 <label id="lbregistrofotografico" for="registrofotografico">Registro Fotográfico: </label>
                 <input id="registrofotografico" type="file" name="registrofotografico">
