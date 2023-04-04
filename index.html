@@ -12,10 +12,11 @@
     <script src="script/script.js"></script>
 
     <style>
-        label{
+        label {
             color: #013463;
         }
-        #btn{
+
+        #btn {
             background-color: #70bc7b;
         }
     </style>
@@ -31,7 +32,8 @@
                 <div class="form-row">
                     <div class="col">
                         <label id="lbcodigopassivo" for="codigopassivo">Código do passivo: </label>
-                        <input class="form-control" id="codigopassivo" type="text" name="codigopassivo" placeholder="(Ex: AC-01)">
+                        <input class="form-control" id="codigopassivo" type="text" name="codigopassivo"
+                            placeholder="(Ex: AC-01)">
                     </div>
                     <div class="col">
                         <label id="lbrodovia" for="rodovia">Rodovia: </label>
@@ -50,11 +52,13 @@
                 <div class="form-row">
                     <div class="col">
                         <label id="lbkminicial" for="kminicial">Km Inicial: </label>
-                        <input class="form-control" id="kminicial" type="text" name="kminicial" style="width: 30vw;" placeholder="(Ex: 022+000)">
+                        <input class="form-control" id="kminicial" type="text" name="kminicial" style="width: 30vw;"
+                            placeholder="(Ex: 022+000)">
                     </div>
                     <div class="col">
                         <label id="lbkmfinal" for="kmfinal">Km Final:</label>
-                        <input class="form-control" id="kmfinal" type="text" name="kmfinal" style="width: 30vw;" placeholder="(Ex: 022+000)">
+                        <input class="form-control" id="kmfinal" type="text" name="kmfinal" style="width: 30vw;"
+                            placeholder="(Ex: 022+000)">
                     </div>
 
                 </div>
@@ -62,18 +66,21 @@
                 <div class="form-row">
                     <div class="col">
                         <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial</label>
-                        <input class="form-control" id="coordInicial" type="text" name="coordInicial" placeholder="(Ex: 000.000 L; 0.000.000 N)">
+                        <input class="form-control" id="coordInicial" type="text" name="coordInicial"
+                            placeholder="(Ex: 000.000 L; 0.000.000 N)">
                     </div>
                     <div class="col">
                         <label id="lbcoordFinal" for="coordFinal">Coordenada Final: </label>
-                        <input class="form-control" id="coordFinal" type="text" name="coordFinal" placeholder="(Ex: 000.000 L; 0.000.000 N)">
+                        <input class="form-control" id="coordFinal" type="text" name="coordFinal"
+                            placeholder="(Ex: 000.000 L; 0.000.000 N)">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="col">
                         <label id="lbsentido" for="sentido">Sentido: </label>
-                        <input class="form-control" id="sentido" type="text" name="sentido" placeholder="(Ex: Minas Gerais)">
+                        <input class="form-control" id="sentido" type="text" name="sentido"
+                            placeholder="(Ex: Minas Gerais)">
                     </div>
                     <div class="col">
                         <label id="lbdirecao" for="sentido">Sentido/Direção: </label>
@@ -263,15 +270,20 @@
                     </div>
                     <div class="col">
                         <input class="form-control" id="diretrizesTecnicas" type="text" name="diretrizesTecnicas"
-                            placeholder="Outros">
+                            placeholder="Outros"><br>
 
                     </div>
                 </div>
 
-                <label id="lbregistrofotografico" for="registrofotografico">Registro Fotográfico: </label>
-                <input id="registrofotografico" type="file" name="registrofotografico"><br>
+                <div class="custom-file">
+                    <label id="lbregistrofotografico" class="custom-file-label" for="registrofotografico">Registro
+                        Fotográfico: </label>
+                    <input id="registrofotografico" class="custom-file-input" type="file"
+                        name="registrofotografico"><br>
+                </div>
 
                 <br><input type="submit" id="btn" class="btn btn-primary" value="Enviar">
+
             </form>
         </div>
 
