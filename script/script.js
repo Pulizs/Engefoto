@@ -42,14 +42,14 @@ function enviar() {
         style += "</style>";
 
 
-        var reader = new FileReader();
-            reader.onload = function (e) {
-                document.getElementById('visulizarImagem').innerHTML = '';
-            };
+        // var reader = new FileReader();
+        //     reader.onload = function (e) {
+        //         document.getElementById('visulizarImagem').innerHTML = '';
+        //     };
 
-            reader.readAsDataURL(arquivoInput.files[0]);
+        //     reader.readAsDataURL(arquivoInput.files[0]);
 
-            console.log(arquivoInput.files[0].size);
+        //     console.log(arquivoInput.files[0].size);
 
         var win = window.open();
 
