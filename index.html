@@ -212,43 +212,57 @@
                     </div>
                 </div>
 
+                <div class="form-row">
+                    <div class="col">
+                        <label id="lbgrupoPassivo" for="grupoPassivo">Grupo de Passivos: </label>
+                        <select class="form-control" name="grupoPassivo" id="grupoPassivo">
+                            <option value="Grupo I">Grupo I</option>
+                            <option value="Grupo II">Grupo II</option>
+                            <option value="Grupo III">Grupo III</option>
+                            <option value="Grupo IV">Grupo IV</option>
+                            <option value="Grupo V">Grupo V</option>
+                            <option value="" selected>- -</option>
+                        </select>
+                    </div>
+                </div>
 
-                <label id="lbgrupoPassivo" for="grupoPassivo">Grupo de Passivos: </label>
-                <select class="form-control" name="grupoPassivo" id="grupoPassivo">
-                    <option value="Grupo I">Grupo I</option>
-                    <option value="Grupo II">Grupo II</option>
-                    <option value="Grupo III">Grupo III</option>
-                    <option value="Grupo IV">Grupo IV</option>
-                    <option value="Grupo V">Grupo V</option>
-                    <option value="" selected>- -</option>
-                </select>
-
-                <label id="lbobs" for="obs">Observações Relevantes: </label>
-                <textarea id="obs" class="form-control" id="exampleFormControlTextarea1" rows="3"
-                    placeholder="Escreva aqui as observações..."></textarea>
+                <div class="form-row">
+                    <div class="col">
+                        <label id="lbobs" for="obs">Observações Relevantes: </label>
+                        <textarea id="obs" class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Escreva aqui as observações..."></textarea>
+                    </div>
+                </div>
 
                 <label id="lbdiretrizesTecnicas" for="diretrizesTecnicas">Diretrizes Técnicas para
                     Recuperação/Remediação: </label>
-                <select class="form-control" name="diretrizesTecnicas" id="diretrizesTecnicas">
-                    <option value="Estabilização">Estabilização</option>
-                    <option value="Recomposicao">Recomposição</option>
-                    <option value="Enleivamento">Enleivamento</option>
-                    <option value="arjeta Trapezoidal Concreto">Sarjeta Trapezoidal Concreto</option>
-                    <option value="Gabião">Gabião</option>
-                    <option value="Manuten. e Conservação">Manuten. e Conservação</option>
-                    <option value="Reman./ Desoucup. da FD">Reman./ Desoucup. da FD</option>
-                    <option value="Retentores de sedimentos">Retentores de sedimentos</option>
-                    <option value="Trincheira Muro de concreto">Trincheira C</option>
-                    <option value="Muro de concreto">Muro de concreto</option>
-                    <option value="Retaludamento">Retaludamento</option>
-                    <option value="Hidrossemeadura">Hidrossemeadura</option>
-                    <option value="Aterros em degraus">Aterros em degraus</option>
-                    <option value="Enrocamento de pedra">Enrocamento de pedra</option>
-                    <option value="Nec. de interv. além da FD">Nec. de interv. além da FD</option>
-                    <option value="" selected>- -</option>
-                </select>
-                <input class="form-control" id="diretrizesTecnicas" type="text" name="diretrizesTecnicas"
-                    placeholder="Outros">
+                <div class="form-row">
+                    <div class="col">
+                        <select class="form-control" name="diretrizesTecnicas" id="diretrizesTecnicas">
+                            <option value="Estabilização">Estabilização</option>
+                            <option value="Recomposicao">Recomposição</option>
+                            <option value="Enleivamento">Enleivamento</option>
+                            <option value="arjeta Trapezoidal Concreto">Sarjeta Trapezoidal Concreto</option>
+                            <option value="Gabião">Gabião</option>
+                            <option value="Manuten. e Conservação">Manuten. e Conservação</option>
+                            <option value="Reman./ Desoucup. da FD">Reman./ Desoucup. da FD</option>
+                            <option value="Retentores de sedimentos">Retentores de sedimentos</option>
+                            <option value="Trincheira Muro de concreto">Trincheira C</option>
+                            <option value="Muro de concreto">Muro de concreto</option>
+                            <option value="Retaludamento">Retaludamento</option>
+                            <option value="Hidrossemeadura">Hidrossemeadura</option>
+                            <option value="Aterros em degraus">Aterros em degraus</option>
+                            <option value="Enrocamento de pedra">Enrocamento de pedra</option>
+                            <option value="Nec. de interv. além da FD">Nec. de interv. além da FD</option>
+                            <option value="" selected>- -</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <input class="form-control" id="diretrizesTecnicas" type="text" name="diretrizesTecnicas"
+                            placeholder="Outros">
+
+                    </div>
+                </div>
 
                 <label id="lbregistrofotografico" for="registrofotografico">Registro Fotográfico: </label>
                 <input id="registrofotografico" type="file" name="registrofotografico">
