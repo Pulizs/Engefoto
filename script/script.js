@@ -6,8 +6,12 @@ function enviar() {
     let municipio = document.getElementById("municipio").value;
     let kminicial = document.getElementById("kminicial").value;
     let kmfinal = document.getElementById("kmfinal").value;
-    let coordInicial = document.getElementById("coordInicial").value;
-    let coordFinal = document.getElementById("coordFinal").value;
+    let coordInicialL = document.getElementById("coordInicialL").value;
+    let coordInicialN = document.getElementById("coordInicialN").value;
+    let coordInicial = coordInicialL + "L; " + coordInicialN + "N";
+    let coordFinalL = document.getElementById("coordFinalL").value;
+    let coordFinalN = document.getElementById("coordFinalN").value;
+    let coordFinal = coordFinalL + "L; " + coordFinalN + "N";
     let sentido = document.getElementById("sentido").value;
     let sentidons = document.getElementById("sentidons").value;
     let causageradora = document.getElementById("causageradora").value;
@@ -31,7 +35,7 @@ function enviar() {
 
     
     
-    if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicial == "" || sentido == "" || sentidons == "") {
+    if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicialL == "" || coordInicialN == "" || sentido == "" || sentidons == "") {
         erroPreenchimento();
     } else{
         var style = "<style>";

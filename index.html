@@ -19,6 +19,14 @@
         #btn {
             background-color: #70bc7b;
         }
+        header{
+            height: 6vh;
+            width: 100vw;
+            background-color: #FF6161;
+            border-radius: 5px;
+            text-align: center;
+            
+        }
     </style>
 </head>
 
@@ -26,6 +34,10 @@
 
     <div class="container" style="background-color: #eee">
         <div class="container">
+
+            <header>
+                <p>&#10006; algum campo não foi preenchido</p>
+            </header>
 
             <img src="imagens/engefotoLogo.jpg" alt="" style="height: 37vh; width: 40vb;"><br><br>
             <form id="formularioFicha" onsubmit="enviar()" action="" method="post">
@@ -65,14 +77,27 @@
 
                 <div class="form-row">
                     <div class="col">
-                        <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial</label>
-                        <input class="form-control" id="coordInicial" type="text" name="coordInicial"
-                            placeholder="(Ex: 000.000 L; 0.000.000 N)">
+                        <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial (L):</label>
+                        <input class="form-control" id="coordInicialL" type="text" name="coordInicial"
+                            placeholder="(Ex: 000.000 L)">
                     </div>
                     <div class="col">
-                        <label id="lbcoordFinal" for="coordFinal">Coordenada Final: </label>
-                        <input class="form-control" id="coordFinal" type="text" name="coordFinal"
-                            placeholder="(Ex: 000.000 L; 0.000.000 N)">
+                        <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial (N):</label>
+                        <input class="form-control" id="coordInicialN" type="text" name="coordInicial"
+                            placeholder="(Ex: 000.000 N)">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <label id="lbcoordFinal" for="coordFinal">Coordenada Final (L):</label>
+                        <input class="form-control" id="coordFinalL" type="text" name="coordInicial"
+                            placeholder="(Ex: 000.000 L)">
+                    </div>
+                    <div class="col">
+                        <label id="lbcoordFinal" for="coordFinal">Coordenada Final (N):</label>
+                        <input class="form-control" id="coordFinalN" type="text" name="coordInicial"
+                            placeholder="(Ex: 000.000 N)">
                     </div>
                 </div>
 
