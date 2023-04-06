@@ -19,27 +19,28 @@
         #btn {
             background-color: #70bc7b;
         }
-        header{
+
+        header {
             height: 6vh;
-           
+            width: 100vw;
+
             background-color: #FF6161;
-            border-radius: 5px;
             text-align: center;
-            
+
         }
     </style>
 </head>
 
 <body>
-
+    <header id="header" style="display: none;">
+        <p>&#10006; algum campo não foi preenchido</p>
+    </header>
     <div class="container" style="background-color: #eee">
         <div class="container">
 
-            <header>
-                <p>&#10006; algum campo não foi preenchido</p>
-            </header>
 
-            <img src="imagens/engefotoLogo.jpg" alt="" style="height: 37vh; width: 40vb;"><br><br>
+
+            <img src="imagens/Logo_Engefoto.jpg" alt="" style="width: 80vw; "><br><br>
             <form id="formularioFicha" onsubmit="enviar()" action="" method="post">
                 <div class="form-row">
                     <div class="col">
@@ -52,55 +53,72 @@
                         <input id="rodovia" class="form-control" type="text" name="rodovia" placeholder="(Ex: BR 155)">
                     </div>
                 </div>
+
+                <br>
+                <label for="municipio">Municipio: </label>
                 <div class="form-row">
-                    <label for="municipio">Municipio: </label>
-                    <select class="form-control" name="municipio" id="municipio">
-                        <option value="Rio De Janeiro">Rio de Janeiro</option>
-                        <option value="Minas Gerais"> Minas Gerais</option>
-                        <option value="" selected>- -</option>
-                    </select>
+                    <div class="col">
+                        <input id="municipio" class="form-control" type="text" name="municipio"
+                            placeholder="(Ex: Barbacena)" style="width: 60vw;">
+                    </div>
+                    <div class="col">
+                        <select class="form-control" name="estado" id="estado" style="width: 18vw;">
+                            <option value="MG">MG</option>
+                            <option value="RJ">RJ</option>
+                            <option value="DF">DF</option>
+                            <option value="GO">GO</option>
+                            <option value="TO">TO</option>
+                            <option value="BA">BA</option>
+                            <option value="SP">SP</option>
+                            <option value="PR">PR</option>
+                            <option value="SE">SE</option>
+                            <option value="" selected>--</option>
+                        </select>
+                    </div>
+
                 </div>
 
                 <div class="form-row">
                     <div class="col">
                         <label id="lbkminicial" for="kminicial">Km Inicial: </label>
-                        <input class="form-control" id="kminicial" type="text" name="kminicial" style="width: 30vw;"
+                        <input class="form-control" id="kminicial" type="text" name="kminicial" style="width: 32vw;"
                             placeholder="(Ex: 022+000)">
                     </div>
                     <div class="col">
                         <label id="lbkmfinal" for="kmfinal">Km Final:</label>
-                        <input class="form-control" id="kmfinal" type="text" name="kmfinal" style="width: 30vw;"
+                        <input class="form-control" id="kmfinal" type="text" name="kmfinal" style="width: 32vw;"
                             placeholder="(Ex: 022+000)">
                     </div>
 
                 </div>
 
+                <br>
+                <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial:</label>
                 <div class="form-row">
                     <div class="col">
-                        <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial (L):</label>
                         <input class="form-control" id="coordInicialL" type="text" name="coordInicial"
-                            placeholder="(Ex: 000.000 L)">
+                            placeholder="(Ex: 000.000 L)" style="width: 33vw;">
                     </div>
                     <div class="col">
-                        <label id="lbcoordInicial" for="coordInicial">Coordenada Inicial (N):</label>
+
                         <input class="form-control" id="coordInicialN" type="text" name="coordInicial"
-                            placeholder="(Ex: 000.000 N)">
+                            placeholder="(Ex: 000.000 N)" style="width: 33vw;">
                     </div>
                 </div>
 
+                <label id="lbcoordFinal" for="coordFinal">Coordenada Final:</label>
                 <div class="form-row">
                     <div class="col">
-                        <label id="lbcoordFinal" for="coordFinal">Coordenada Final (L):</label>
                         <input class="form-control" id="coordFinalL" type="text" name="coordInicial"
-                            placeholder="(Ex: 000.000 L)">
+                            placeholder="(Ex: 000.000 L)" style="width: 33vw;">
                     </div>
                     <div class="col">
-                        <label id="lbcoordFinal" for="coordFinal">Coordenada Final (N):</label>
                         <input class="form-control" id="coordFinalN" type="text" name="coordInicial"
-                            placeholder="(Ex: 000.000 N)">
+                            placeholder="(Ex: 000.000 N)" style="width: 33vw;">
                     </div>
                 </div>
 
+                <br>
                 <div class="form-row">
                     <div class="col">
                         <label id="lbsentido" for="sentido">Sentido: </label>
@@ -144,6 +162,7 @@
                     </div>
                 </div>
 
+                <br>
                 <div class="form-row">
                     <div class="col">
                         <label id="lbcentrodeCusto" for="centrodeCusto">Centro de Custo: </label>
@@ -182,7 +201,7 @@
 
                 <div class="form-row">
                     <div class="col">
-                        <label id="lbtipoOF" for="tipoOF">Ocupação Irregular (OF): </label>
+                        <label id="lbtipoOF" for="tipoOF">Tipos OF: </label>
                         <select class="form-control" name="tipoOF" id="tipoOF">
                             <option value="Comercial">Comercial</option>
                             <option value="Residencial"> Residencial</option>
@@ -230,19 +249,18 @@
                     </div>
                 </div>
 
+                <br>
                 <label id="lbdimensoes" for="dimensoes">Dimensões da Ocorrencia: </label>
                 <div class="form-row">
                     <div class="col">
-                        <br>
                         <input class="form-control" id="dimensoes" type="number" name="dimensoes"
                             placeholder="Comprimento(m)">
                     </div>
                     <div class="col">
-                        <br>
+
                         <input class="form-control" id="largura" type="number" name="largura" placeholder="Largura(m)">
                     </div>
                     <div class="col">
-                        <br>
                         <input class="form-control" id="profundidade" type="number" name="profundidade"
                             placeholder="Profundidade(m)">
                     </div>

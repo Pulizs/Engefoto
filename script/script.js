@@ -4,6 +4,8 @@ function enviar() {
     let codigoPassivo = document.getElementById("codigopassivo").value.toUpperCase().replace(" ", "-");
     let rodovia = document.getElementById("rodovia").value.toUpperCase().replace(" ", "-");
     let municipio = document.getElementById("municipio").value;
+    let estado = document.getElementById("estado").value;
+    municipio = municipio + "(" + estado + ")"
     let kminicial = document.getElementById("kminicial").value;
     let kmfinal = document.getElementById("kmfinal").value;
     let coordInicialL = document.getElementById("coordInicialL").value;
