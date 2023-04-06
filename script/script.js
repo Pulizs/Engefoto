@@ -31,15 +31,14 @@ function enviar() {
     let grupoPassivo = document.getElementById("grupoPassivo").value;
     let observacao = document.getElementById("obs").value;
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
-    var arquivoInput = document.getElementById("registrofotografico");
-    var caminhoArquivo = arquivoInput.value;
-    
+    let registoFotografico = document.getElementById("registrofotografico");
 
-    
-    
+
+
+
     if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicialL == "" || coordInicialN == "" || sentido == "" || sentidons == "") {
         erroPreenchimento();
-    } else{
+    } else {
         var style = "<style>";
         style += "table {width: 100%;font: 20px Calibri;}";
         style += "table, td, .miau {border: solid 1px #DDD; border-collapse: collapse;";
@@ -60,13 +59,13 @@ function enviar() {
         var win = window.open();
 
         win.document.write('<html><head>');
-        win.document.write('<title>Ficha ', codigoPassivo , '</title>');
+        win.document.write('<title>Ficha ', codigoPassivo, '</title>');
         win.document.write(style);
         win.document.write('</head>');
         win.document.write('<body>');
         win.document.write('<table>');
         win.document.write('<tr>');
-        win.document.write('<th>Codigo passivo: ', codigoPassivo , '</th>');
+        win.document.write('<th>Codigo passivo: ', codigoPassivo, '</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -87,12 +86,12 @@ function enviar() {
         win.document.write('<td>Coordenada Inicial: ', coordInicial, '</td>');
         win.document.write('<td>Sentido: ', sentido, '</td>');
         win.document.write('</tr>');
-        
+
         win.document.write('<tr>');
         win.document.write('<td>Coordenada Final: ', coordFinal, '</td>');
         win.document.write('<td>Sentido: ', sentidons, '</td>');
         win.document.write('</tr>');
-        
+
         win.document.write('<tr>');
         win.document.write('<th>Central de Custo:</th>');
         win.document.write('</tr>');
@@ -118,8 +117,8 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<td>', tipoDePassivo,'</td>');
-        win.document.write('<td>', dinamicaAtual,'</td>');
+        win.document.write('<td>', tipoDePassivo, '</td>');
+        win.document.write('<td>', dinamicaAtual, '</td>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -128,8 +127,8 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<td>', gravidadeRodovia,'</td>');
-        win.document.write('<td>', gravidadeAmbiental,'</td>');
+        win.document.write('<td>', gravidadeRodovia, '</td>');
+        win.document.write('<td>', gravidadeAmbiental, '</td>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -144,10 +143,11 @@ function enviar() {
         win.document.write('<tr>');
         win.document.write('<td>Profundidade/Altura(m): ', profundidade, '</td>');
         win.document.write('</tr>');
-        
+
         win.document.write('</table>');
 
         win.document.write('<div id=""visualizarImagem>');
+        win.document.write('<img src="' + registoFotografico + '">');
         win.document.write('</div>');
 
         win.document.write('</body></html>');
