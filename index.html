@@ -20,25 +20,13 @@
             background-color: #70bc7b;
         }
 
-        header {
-            height: 6vh;
-            width: 100vw;
-
-            background-color: #FF6161;
-            text-align: center;
-
-        }
     </style>
 </head>
 
 <body>
-    <header id="header" style="display: none;">
-        <p>&#10006; algum campo não foi preenchido</p>
-    </header>
+
     <div class="container" style="background-color: #eee">
         <div class="container">
-
-
 
             <img src="imagens/Logo_Engefoto.jpg" alt="" style="width: 80vw; "><br><br>
             <form id="formularioFicha" onsubmit="enviar()" action="" method="post">
@@ -72,6 +60,12 @@
                             <option value="SP">SP</option>
                             <option value="PR">PR</option>
                             <option value="SE">SE</option>
+                            <option value="PB">PB</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="RS">RS</option>
+                            <option value="RR">RR</option>
+                            <option value="RO">RO</option>
                             <option value="" selected>--</option>
                         </select>
                     </div>
@@ -341,7 +335,8 @@
         </div>
 
         <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            <label class="text-dark" for="">© 2023 Copyright: <a class="text-dark" href="https://github.com/Pulizs">Pedro Cruz</a></label>
+            <label class="text-dark" for="">© 2023 Copyright: <a class="text-dark"
+                    href="https://github.com/Pulizs">Pedro Cruz</a></label>
         </div>
     </footer>
 
