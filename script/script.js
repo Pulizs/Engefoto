@@ -56,6 +56,8 @@ function enviar() {
 
         //     console.log(arquivoInput.files[0].size);
 
+        alert("Enviado");
+
         var win = window.open();
 
         win.document.write('<html><head>');
@@ -159,5 +161,5 @@ function enviar() {
 }
 
 function erroPreenchimento() {
-    alert("algum campo não foi preenchido");
+    alert("Algum campo não foi preenchido");
 }
