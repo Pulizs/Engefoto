@@ -86,11 +86,11 @@ function enviar() {
 
         win.document.write('<tr>');
         win.document.write('<td>Coordenada Inicial: ', coordInicial, '</td>');
-        win.document.write('<td>Sentido: ', sentido, '</td>');
-        win.document.write('</tr>');
-
-        win.document.write('<tr>');
         win.document.write('<td>Coordenada Final: ', coordFinal, '</td>');
+        win.document.write('</tr>');
+        
+        win.document.write('<tr>');
+        win.document.write('<td>Sentido: ', sentido, '</td>');
         win.document.write('<td>Sentido: ', sentidons, '</td>');
         win.document.write('</tr>');
 
@@ -149,7 +149,7 @@ function enviar() {
         win.document.write('</table>');
 
         win.document.write('<div id=""visualizarImagem>');
-        win.document.write('<img src="' + registoFotografico + '">');
+        win.document.write(registoFotografico);
         win.document.write('</div>');
 
         win.document.write('</body></html>');
