@@ -31,6 +31,7 @@ function enviar() {
     let grupoPassivo = document.getElementById("grupoPassivo").value;
     let observacao = document.getElementById("obs").value;
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
+    let outros = document.getElementById("outrosDiretrizesTecnicas").value;
     let registoFotografico = document.getElementById("registrofotografico");
 
 
@@ -144,6 +145,25 @@ function enviar() {
 
         win.document.write('<tr>');
         win.document.write('<td>Profundidade/Altura(m): ', profundidade, '</td>');
+        win.document.write('<td>Grupo de Passivo: ', grupoPassivo, '</td>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<th> Observações:</th>');        
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td id="observacao">' + observacao + '</th>');        
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<th>Diretrizes Técnicas para Recuperação/Remediação:</th>');
+        win.document.write('<th>Outros:</th>');
+        win.document.write('</tr>');
+
+        win.document.write('<tr>');
+        win.document.write('<td>' + diretrizesTecnicas + '</td>');
+        win.document.write('<td>' + outros + '</td>');
         win.document.write('</tr>');
 
         win.document.write('</table>');
