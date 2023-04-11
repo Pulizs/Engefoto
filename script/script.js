@@ -57,7 +57,7 @@ function enviar() {
 
         //     console.log(arquivoInput.files[0].size);
 
-        alert("Enviado");
+        alert("Enviado!! Tenha um bom trabalho! Clique em OK para gerar a ficha");
 
         var win = window.open();
 
@@ -68,7 +68,7 @@ function enviar() {
         win.document.write('<body>');
         win.document.write('<table>');
         win.document.write('<tr>');
-        win.document.write('<th>Codigo passivo: ', codigoPassivo, '</th>');
+        win.document.write('<th colspan=2>Codigo passivo: ', codigoPassivo, '</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -77,7 +77,7 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th>Localização do Passivo Ambiental</th>');
+        win.document.write('<th>Localização do Passivo Ambiental:</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -135,7 +135,7 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th>Dimensões da Ocorrência</th>');
+        win.document.write('<th>Dimensões da Ocorrência:</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -153,7 +153,7 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<td id="observacao">' + observacao + '</th>');        
+        win.document.write('<td id="observacao" colspan=2>' + observacao + '</th>');        
         win.document.write('</tr>');
 
         win.document.write('<tr>');
