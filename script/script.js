@@ -75,10 +75,13 @@ function enviar() {
         win.document.write('<tr>');
         win.document.write('<td>Rodovia: ', rodovia, '</td>');
         win.document.write('<td>Município: ', municipio, '</td>');
+        win.document.write('<td colspan=2>Foto do Passivo</td>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
         win.document.write('<th colspan=2 style="text-align: left;">Localização do Passivo Ambiental:</th>');
+        win.document.write('<th rowspan=4>' + '</th>');
+        win.document.write('<th rowspan=4>' + '</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -98,6 +101,8 @@ function enviar() {
 
         win.document.write('<tr>');
         win.document.write('<th colspan=2 style="text-align: left;">Central de Custo:</th>');
+        win.document.write('<th rowspan=4>' + '</th>');
+        win.document.write('<th rowspan=4>' + '</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -118,6 +123,7 @@ function enviar() {
         win.document.write('<tr>');
         win.document.write('<th>Tipologia de Passivo:</th>');
         win.document.write('<th>Dinânimca Atual:</th>');
+        win.document.write('<th colspan=4>Imagem de Satélite de Localização do Passivo</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
