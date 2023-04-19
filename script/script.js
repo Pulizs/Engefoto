@@ -199,8 +199,7 @@ function enviar() {
 
         win.document.write('</table>');
 
-        win.document.write('<div id=""visualizarImagem>');
-        win.document.write('</div>');
+        //adicionar um footer com a imagem da engefoto
 
         win.document.write('</body></html>');
 
