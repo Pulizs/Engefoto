@@ -34,7 +34,27 @@ function enviar() {
     let outros = document.getElementById("outrosDiretrizesTecnicas").value;
     let registoFotografico = document.getElementById("registrofotografico");
 
+    const inputFile = document.querySelector('#picture__input');
 
+    inputFile.addEventListener('change', function(e){
+        const inputTarget = e.target;
+        const file = inputTarget.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener('load', function(e){
+                const readerTarget = e.target;
+
+                const img = document.createElement('img');
+                img.classList.add('');
+            });
+
+            reader.readAsDataURL(file);
+        }else{
+
+        }
+    });
 
 
     if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicialL == "" || coordInicialN == "" || sentido == "" || sentidons == "") {
