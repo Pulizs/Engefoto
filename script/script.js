@@ -32,34 +32,10 @@ function enviar() {
     let observacao = document.getElementById("obs").value;
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
     let outros = document.getElementById("outrosDiretrizesTecnicas").value;
-    let registoFotografico = document.getElementById("registrofotografico");
-    
+    let registoFotografico;
 
-    const inputFile = document.querySelector('#picture__input');
 
-    inputFile.addEventListener('change', function(e){
-        const inputTarget = e.target;
-        const file = inputTarget.files[0];
 
-        if (file) {
-            const reader = new FileReader();
-
-            reader.addEventListener('load', function(e){
-                const readerTarget = e.target;
-
-                const img = document.createElement('img');
-                img.src = readerTarget.result;
-
-                img.classList.add('custom-file-input');
-
-                picture
-            });
-
-            reader.readAsDataURL(file);
-        }else{
-
-        }
-    });
 
 
     if (codigoPassivo == "" || rodovia == "" || kminicial == "" || coordInicialL == "" || coordInicialN == "" || sentido == "" || sentidons == "") {
@@ -81,6 +57,29 @@ function enviar() {
         //     reader.readAsDataURL(arquivoInput.files[0]);
 
         //     console.log(arquivoInput.files[0].size);
+
+        const inputFile = document.querySelector('#picture__input');
+
+        inputFile.addEventListener('change', function (e) {
+            const inputTarget = e.target;
+            const file = inputTarget.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.addEventListener('load', function (e) {
+                    const readerTarget = e.target;
+
+                    const img = document.createElement('img');
+                    img.src = readerTarget.result;
+                    win.document.write(img);
+                });
+
+                reader.readAsDataURL(file);
+            } else {
+
+            }
+        });
 
         alert("Enviado!! Tenha um bom trabalho! Clique em OK para gerar a ficha");
 
@@ -118,7 +117,7 @@ function enviar() {
         win.document.write('<td>Coordenada Inicial: ', coordInicial, '</td>');
         win.document.write('<td>Coordenada Final: ', coordFinal, '</td>');
         win.document.write('</tr>');
-        
+
         win.document.write('<tr>');
         win.document.write('<td>Sentido: ', sentido, '</td>');
         win.document.write('<td>Sentido: ', sentidons, '</td>');
@@ -181,13 +180,13 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th colspan=2 style="text-align: left;"> Observações:</th>');        
+        win.document.write('<th colspan=2 style="text-align: left;"> Observações:</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<td id="observacao" colspan=2>' + observacao + '</th>');        
+        win.document.write('<td id="observacao" colspan=2>' + observacao + '</th>');
         win.document.write('</tr>');
-
+        //fazer uma class para adicionar a imagem
         win.document.write('<tr>');
         win.document.write('<th>Diretrizes Técnicas para Recuperação/Remediação:</th>');
         win.document.write('<th>Outros:</th>');
@@ -201,7 +200,6 @@ function enviar() {
         win.document.write('</table>');
 
         win.document.write('<div id=""visualizarImagem>');
-        win.document.write(registoFotografico);
         win.document.write('</div>');
 
         win.document.write('</body></html>');
