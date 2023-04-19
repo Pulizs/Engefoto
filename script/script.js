@@ -33,6 +33,7 @@ function enviar() {
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
     let outros = document.getElementById("outrosDiretrizesTecnicas").value;
     let registoFotografico = document.getElementById("registrofotografico");
+    
 
 
 
