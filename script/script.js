@@ -33,6 +33,7 @@ function enviar() {
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
     let outros = document.getElementById("outrosDiretrizesTecnicas").value;
     let registoFotografico = document.getElementById("registrofotografico");
+    
 
     const inputFile = document.querySelector('#picture__input');
 
@@ -62,7 +63,7 @@ function enviar() {
     } else {
         var style = "<style>";
         style += "table {width: 100%;font: 20px Calibri;}";
-        style += "table, td, .miau {border: solid 1px #DDD; border-collapse: collapse;";
+        style += "table, td, th {border: solid 1px #DDD; border-collapse: collapse;";
         style += "padding: 2px 3px;text-align: center;}";
         style += "th {background-color: white;}"
         style += "</style>";
@@ -77,7 +78,7 @@ function enviar() {
 
         //     console.log(arquivoInput.files[0].size);
 
-        alert("Enviado");
+        alert("Enviado!! Tenha um bom trabalho! Clique em OK para gerar a ficha");
 
         var win = window.open();
 
@@ -88,16 +89,20 @@ function enviar() {
         win.document.write('<body>');
         win.document.write('<table>');
         win.document.write('<tr>');
-        win.document.write('<th>Codigo passivo: ', codigoPassivo, '</th>');
+        win.document.write('<th colspan=2>Codigo passivo: ', codigoPassivo, '</th>');
+        win.document.write('<th colspan=2>Registro fotográfico:</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
         win.document.write('<td>Rodovia: ', rodovia, '</td>');
         win.document.write('<td>Município: ', municipio, '</td>');
+        win.document.write('<td colspan=2>Foto do Passivo</td>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th>Localização do Passivo Ambiental</th>');
+        win.document.write('<th colspan=2 style="text-align: left;">Localização do Passivo Ambiental:</th>');
+        win.document.write('<th rowspan=4>' + '</th>');
+        win.document.write('<th rowspan=4>' + '</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -116,7 +121,9 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th>Central de Custo:</th>');
+        win.document.write('<th colspan=2 style="text-align: left;">Central de Custo:</th>');
+        win.document.write('<th rowspan=4>' + '</th>');
+        win.document.write('<th rowspan=4>' + '</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -125,8 +132,8 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th class="miau">Causa Geradora:</th>');
-        win.document.write('<th class="miau">Local do Passivo Ambiental:</th>');
+        win.document.write('<th>Causa Geradora:</th>');
+        win.document.write('<th>Local do Passivo Ambiental:</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -135,8 +142,9 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th class="miau">Tipologia de Passivo:</th>');
-        win.document.write('<th class="miau">Dinânimca Atual:</th>');
+        win.document.write('<th>Tipologia de Passivo:</th>');
+        win.document.write('<th>Dinânimca Atual:</th>');
+        win.document.write('<th colspan=4>Imagem de Satélite de Localização do Passivo</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -145,8 +153,8 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th class="miau">Gravidade em Relação a Rodovia:</th>');
-        win.document.write('<th class="miau">Gravidade em Relação ao Ambiente:</th>');
+        win.document.write('<th>Gravidade em Relação a Rodovia:</th>');
+        win.document.write('<th>Gravidade em Relação ao Ambiente:</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -155,7 +163,7 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th>Dimensões da Ocorrência</th>');
+        win.document.write('<th colspan=2 style="text-align: left;">Dimensões da Ocorrência:</th>');
         win.document.write('</tr>');
 
         win.document.write('<tr>');
@@ -169,11 +177,11 @@ function enviar() {
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<th> Observações:</th>');        
+        win.document.write('<th colspan=2 style="text-align: left;"> Observações:</th>');        
         win.document.write('</tr>');
 
         win.document.write('<tr>');
-        win.document.write('<td id="observacao">' + observacao + '</th>');        
+        win.document.write('<td id="observacao" colspan=2>' + observacao + '</th>');        
         win.document.write('</tr>');
 
         win.document.write('<tr>');
