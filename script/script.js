@@ -48,7 +48,11 @@ function enviar() {
                 const readerTarget = e.target;
 
                 const img = document.createElement('img');
-                img.classList.add('');
+                img.src = readerTarget.result;
+
+                img.classList.add('custom-file-input');
+
+                picture
             });
 
             reader.readAsDataURL(file);
