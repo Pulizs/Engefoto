@@ -32,7 +32,7 @@ function enviar() {
     let observacao = document.getElementById("obs").value;
     let diretrizesTecnicas = document.getElementById("diretrizesTecnicas").value;
     let outros = document.getElementById("outrosDiretrizesTecnicas").value;
-    let registoFotografico;
+    let registoFotografico = document.getElementById("picture__input").files[0];
 
 
 
@@ -45,8 +45,13 @@ function enviar() {
         style += "table {width: 100%;font: 20px Calibri;}";
         style += "table, td, th {border: solid 1px #DDD; border-collapse: collapse;";
         style += "padding: 2px 3px;text-align: center;}";
-        style += "th {background-color: white;}"
+        style += "th {background-color: white;}";
+        style += ".";
         style += "</style>";
+
+        var script = "<script>";
+        script += "const output = document.querySelector('output');";
+        script += "</script>";
 
         // var reader = new FileReader();
         //     reader.onload = function (e) {
@@ -60,6 +65,7 @@ function enviar() {
 
 
         alert("Enviado!! Tenha um bom trabalho! Clique em OK para gerar a ficha");
+       
 
         var win = window.open();
 
@@ -82,36 +88,10 @@ function enviar() {
 
         win.document.write('<tr>');
         win.document.write('<th colspan=2 style="text-align: left;">Localização do Passivo Ambiental:</th>');
-        win.document.write('<th rowspan=4"><span class="picture__image"></span></th>');
+        win.document.write('<th rowspan=4">' + registoFotografico + '</th>');
         win.document.write('<th rowspan=4>' + '</th>');
 
 
-        const inputFile = document.querySelector('#picture__input');
-        const pictureImage = document.querySelector('.picture__image');
-
-
-        inputFile.addEventListener('change', function (e) {
-            const inputTarget = e.target;
-            const file = inputTarget.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-
-                reader.addEventListener('load', function (e) {
-                    const readerTarget = e.target;
-
-                    const img = document.createElement('img');
-                    img.src = readerTarget.result;
-                    //img.classList.add('.picture__image');
-
-                    pictureImage.appendChild(img);
-                });
-
-                reader.readAsDataURL(file);
-            } else {
-
-            }
-        });
 
         win.document.write('</tr>');
 
